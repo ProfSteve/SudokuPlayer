@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Play here.
+ * Cell model, used for obtaining coordinate and value data about a board cell
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Stephen Lackey
+ * @version August 7, 2018
  */
 public class Cell
 {

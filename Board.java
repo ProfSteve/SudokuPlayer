@@ -1,6 +1,6 @@
 
 /**
- * The Sudoku board, 
+ * The Sudoku board model
  *
  * @author Stephen Lackey
  * @version August 7, 2018

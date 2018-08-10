@@ -2,8 +2,8 @@
 /**
  * The Plays class tracks the board state and provides view to the Board model
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Stephen Lackey
+ * @version August 7, 2018
  */
 public class Plays
 {
