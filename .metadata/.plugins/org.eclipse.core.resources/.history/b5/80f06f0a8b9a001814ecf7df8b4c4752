@@ -1,0 +1,50 @@
+
+/**
+ * Write a description of class Plays here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class Plays
+{
+    // instance variables - replace the example below with your own
+    private Cell[] currentPlays ;
+    private int lastPlay ; 
+    
+    /**
+     * Initialize the Play stack. This keeps track of the history of cells played.
+     */
+    public Plays()
+    {
+        // Initialize stack
+        currentPlays = new Cell[200];
+        // initialize the play stack to -1
+        lastPlay = -1;
+    }
+
+    /**
+     * Add a play to the play stack
+     *
+     * @param  row  the row of the value played
+     * @param  col  the column of the value played
+     * @param  value  the value played
+     */
+    public void addPlay(int row, int col, int value)
+    {
+        lastPlay++;
+        currentPlays[lastPlay] = new Cell(row, col, value);
+    }
+    
+    public Cell removePlay ()
+    {
+        lastPlay--;
+        return currentPlays[lastPlay+1];
+    }
+    
+    public int getSize()
+    {
+        return lastPlay;
+    }
+    
+    
+}

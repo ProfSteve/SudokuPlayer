@@ -1,0 +1,24 @@
+
+/**
+ * Write a description of class BoardReader here.
+ *
+ * @author Steve Lackey
+ * @version 08/06/2018
+ */
+
+public class Solver
+{
+  public static void main(String[] args) 
+  {
+
+       Board board = new Board("puzzle1.txt");
+       //Plays plays = new Plays();
+       //loadBoard
+           System.out.println(board);
+    
+  
+  }
+  
+ 
+  
+}

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Board
+comment1.params=fileName
+comment1.target=Board(java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Board.\n\ The\ board\ is\ defined\ as\ 9x9\ cells.\n
+comment2.params=fileName
+comment2.target=void\ loadBoard(java.lang.String)
+comment3.params=rowNum\ thisRow
+comment3.target=void\ loadRow(int,\ java.lang.String)
+comment3.text=\n\ Create\ row\ for\ Sudoku\ board\ from\ 9-digit\ input\ string.\ \n\n\ @param\ \ rowNum\ \ the\ current\ row\ number\n\n\ @param\ \ thisRow\ \ a\ string\ of\ the\ current\ row\ values\ from\ input\ data\ file\n
+comment4.params=rowNum\ scanValue
+comment4.target=boolean\ scanRow(int,\ int)
+comment4.text=\n\ Scan\ row\ for\ given\ value.\ Returns\ true\ if\ value\ is\ found.\n\n\ @param\ \ rowNum\ \ the\ current\ row\ number\n\n\ @param\ \ scanValue\ \ a\ string\ of\ the\ current\ row\ values\ from\ input\ data\ file\n
+comment5.params=colNum\ scanValue
+comment5.target=boolean\ scanColumn(int,\ int)
+comment5.text=\n\ Scan\ column\ for\ given\ value.\ Returns\ true\ if\ value\ is\ found.\n\n\ @param\ \ colNum\ \ the\ current\ row\ number\n\n\ @param\ \ scanValue\ \ a\ string\ of\ the\ current\ row\ values\ from\ input\ data\ file\n
+comment6.params=boxNum\ scanValue
+comment6.target=boolean\ scanBox(int,\ int)
+comment6.text=\n\ Scan\ each\ box\ for\ given\ value.\ Returns\ true\ if\ value\ is\ found.\n\n\ @param\ \ boxNum\ \ the\ current\ box\ number\n\n\ @param\ \ scanValue\ \ a\ string\ of\ the\ current\ row\ values\ from\ input\ data\ file\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

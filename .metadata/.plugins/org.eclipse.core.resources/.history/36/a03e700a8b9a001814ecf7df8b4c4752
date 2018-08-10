@@ -1,0 +1,168 @@
+
+/**
+ * The Sudoku board, 
+ *
+ * @author Stephen Lackey
+ * @version August 7, 2018
+ */
+import java.io.*;
+public class Board
+{
+    // instance variables - replace the example below with your own
+    private int x;
+
+    private int[][] thisBoard ;
+
+    
+    /**
+     * Constructor for objects of class Board.
+     * The board is defined as 9x9 cells.
+     */
+        
+    public Board(String fileName)
+    {
+       int[][] thisBoard = new int[9][9];
+       loadBoard(fileName);
+       
+    }
+    
+    
+
+     public void loadBoard(String fileName)
+  {
+      int rowcounter = 0;
+      try {
+            File file = new File(fileName );
+ 
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+ 
+            String thisLine;
+            while ((thisLine = reader.readLine()) != null)
+                loadRow(rowcounter++,thisLine);
+                System.out.println(thisLine);
+
+            }
+            
+                catch (FileNotFoundException fe)
+    {
+        System.out.println(fe.getMessage());
+    }
+    
+    catch (Exception e)
+    {
+        System.out.println(e.getMessage());
+    }
+    
+    }
+    
+    
+    
+    /**
+     * Create row for Sudoku board from 9-digit input string. 
+     *
+     * @param  rowNum  the current row number
+     *
+     * @param  thisRow  a string of the current row values from input data file
+     */
+    public void loadRow(int rowNum, String thisRow)
+    {
+     
+        for (int i=0; i<thisRow.length(); i++)
+        {
+            // the indexOf returns a zero-based index or -1 if not found. Just add 1
+            //   so that non-numeric values are 0 and numeric values match search string.
+            thisBoard[rowNum][i] = "123456789".indexOf(thisRow.charAt(i)) + 1;
+        }
+    }
+    /**
+     * Scan row for given value. Returns true if value is found.
+     *
+     * @param  rowNum  the current row number
+     *
+     * @param  scanValue  a string of the current row values from input data file
+     */
+    public boolean scanRow (int rowNum, int scanValue)
+    {
+        for (int i=0; i<9; i++)
+        {
+            if (thisBoard[rowNum][i] == scanValue)
+            return true;
+        }
+        return false;
+    }
+    
+    
+    
+    /**
+     * Scan column for given value. Returns true if value is found.
+     *
+     * @param  colNum  the current row number
+     *
+     * @param  scanValue  a string of the current row values from input data file
+     */
+    public boolean scanColumn (int colNum, int scanValue)
+    {
+        for (int i=0; i<9; i++)
+        {
+            if (thisBoard[i][colNum] == scanValue)
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * Scan each box for given value. Returns true if value is found.
+     *
+     * @param  boxNum  the current box number
+     *
+     * @param  scanValue  a string of the current row values from input data file
+     */
+    public boolean scanBox(int boxNum, int scanValue)
+    {
+        int rowStart = 0;
+        int colStart = 0;
+        
+        switch (boxNum)
+        {
+            // clarify that the box list is 0-based
+            case 0: rowStart = 0;   colStart = 0;   break;
+            case 1: rowStart = 0;   colStart = 3;   break;    
+            case 2: rowStart = 0;   colStart = 6;   break;   
+
+            case 3: rowStart = 3;   colStart = 0;   break;
+            case 4: rowStart = 3;   colStart = 3;   break;    
+            case 5: rowStart = 3;   colStart = 6;   break;                
+   
+            case 6: rowStart = 6;   colStart = 0;   break;
+            case 7: rowStart = 6;   colStart = 3;   break;    
+            case 8: rowStart = 6;   colStart = 6;   break;                
+        }
+        
+        for (int i=0; i<3; i++)
+        {
+            for (int j=0; j<3; j++)
+            {
+                if (thisBoard[rowStart+i][colStart+j] == scanValue)
+                return true;
+            }    
+        }
+      
+        return false;
+    }
+     public String toString()
+     {
+        StringBuffer output = new StringBuffer("");
+         
+         for (int i=0; i<9; i++)
+        {
+            for (int j=0; j<9; j++)
+            {
+                 output.append(thisBoard[i][j] );
+              
+            }    
+        }
+        return output.toString();
+        }
+
+}
+

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Plays
+comment0.text=\n\ Write\ a\ description\ of\ class\ Plays\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Plays()
+comment1.text=\n\ Initialize\ the\ Play\ stack.\ This\ keeps\ track\ of\ the\ history\ of\ cells\ played.\n
+comment2.params=row\ col\ value
+comment2.target=void\ addPlay(int,\ int,\ int)
+comment2.text=\n\ Add\ a\ play\ to\ the\ play\ stack\n\n\ @param\ \ row\ \ the\ row\ of\ the\ value\ played\n\ @param\ \ col\ \ the\ column\ of\ the\ value\ played\n\ @param\ \ value\ \ the\ value\ played\n
+comment3.params=
+comment3.target=Cell\ removePlay()
+comment4.params=
+comment4.target=int\ getSize()
+numComments=5

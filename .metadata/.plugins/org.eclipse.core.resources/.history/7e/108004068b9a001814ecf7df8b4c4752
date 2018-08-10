@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Cell
+comment0.text=\n\ Write\ a\ description\ of\ class\ Play\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Cell()
+comment1.text=\n\ Constructor\ for\ each\ Play\n
+comment2.params=row\ col\ val
+comment2.target=Cell(int,\ int,\ int)
+comment3.params=
+comment3.target=int\ getPlayValue()
+comment3.text=\n\ Get\ the\ value\ of\ the\ cell\n\n\ @return\ \ \ \ the\ value\ of\ the\ cell\n
+comment4.params=
+comment4.target=int\ getRow()
+comment4.text=\n\ Get\ the\ row\ number\ of\ the\ cell\n\n\ @return\ \ \ \ the\ row\ number\ of\ the\ cell\n
+comment5.params=
+comment5.target=int\ getColumn()
+comment5.text=\n\ Get\ the\ column\ number\ of\ the\ cell\n\n\ @return\ \ \ \ the\ column\ number\ of\ the\ cell\n
+comment6.params=
+comment6.target=int\ getBox()
+comment6.text=\n\ Get\ the\ box\ number\ of\ the\ cell\n\n\ @return\ \ \ \ the\ box\ number\ of\ the\ cell\n
+numComments=7
