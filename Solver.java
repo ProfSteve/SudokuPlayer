@@ -10,8 +10,14 @@ public class Solver
 {
   public static void main(String[] args) 
   {
+      String thisFile ; 
+      if (args.length >0)
+        thisFile = args[0];
+      else 
+        thisFile = "puzzle1.txt";
+      
        Plays newGame = new Plays();
-       newGame.startBoard("puzzle1.txt");
+       newGame.startBoard(thisFile);
        
        // Limit to 40 iterations. Easy boards finish in ~10 iterations
        for (int f=0;f<40;f++)
@@ -52,8 +58,9 @@ public class Solver
         }
        //System.out.println(newGame.getNextEmpty());
     }
-       
-
+    newGame.showBoard();
+    
+    newGame.saveBoard(thisFile+".sln");
 
   }
   

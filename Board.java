@@ -53,6 +53,46 @@ public class Board
     
     }
     
+     /**
+     * Saves board from data in given file to filename to given filename
+     * 
+     * @param   fileName    The filename. If path not specified, current directory is assumed
+     */
+    public void saveBoard(String fileName)
+    {
+        try {
+               // File file = new File(fileName );
+     
+                BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+                
+                StringBuffer thisOutput = new StringBuffer("");
+                
+                for (int i = 0; i<9; i++)
+                {
+                    for (int j = 0; j<9; j++)
+                    {
+                       thisOutput.append(thisBoard[i][j]);
+                    }
+                    thisOutput.append("\n");
+                }
+                
+                writer.write( thisOutput.toString());
+                writer.flush();
+                writer.close();
+            }
+            
+                catch (FileNotFoundException fe)
+            {
+                System.out.println(fe.getMessage());
+            }
+    
+                catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+            }
+    
+    }
+    
     
     
     /**
@@ -236,6 +276,8 @@ public class Board
      {
         thisBoard [rowref][colref] = value ;
         }    
+        
+        
         
 }
 

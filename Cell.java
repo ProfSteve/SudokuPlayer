@@ -1,6 +1,6 @@
 
 /**
- * Cell model, used for obtaining coordinate and value data about a board cell
+ * Cell view, used for obtaining coordinate and value data about a board cell
  *
  * @author Stephen Lackey
  * @version August 7, 2018

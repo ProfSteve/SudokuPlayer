@@ -40,6 +40,20 @@ public class Plays
     
     }
     
+      /**
+     * Save the board to the given filename
+     *
+     * @param  fileName - name of the file
+     */
+    
+    public void saveBoard(String fileName){
+
+      board.saveBoard(fileName);
+    
+    }
+    
+    
+    
     /**
      *  Add a play to the play stack
      * 
